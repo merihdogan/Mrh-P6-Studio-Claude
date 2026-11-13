@@ -1,0 +1,22 @@
+{
+  "name": "mrh-p6",
+  "owner": {
+    "name": "Merih Doğan",
+    "url": "https://github.com/merihdogan"
+  },
+  "metadata": {
+    "description": "MRH P6 - Primavera P6 tools for Claude"
+  },
+  "plugins": [
+    {
+      "name": "mrh-p6",
+      "source": "./",
+      "description": "Read and edit Primavera P6 Professional SQLite schedules.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Merih Doğan"
+      },
+      "license": "MIT"
+    }
+  ]
+}

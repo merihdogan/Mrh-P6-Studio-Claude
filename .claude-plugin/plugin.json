@@ -1,0 +1,33 @@
+{
+  "name": "mrh-p6",
+  "version": "1.0.0",
+  "description": "Read and edit Primavera P6 Professional SQLite schedules: overview, activity search, health check, baseline slips, look-ahead, XER export and safe, undoable edits.",
+  "author": {
+    "name": "Merih Doğan",
+    "url": "https://github.com/merihdogan"
+  },
+  "homepage": "https://github.com/merihdogan/mrh-p6-claude",
+  "repository": "https://github.com/merihdogan/mrh-p6-claude",
+  "license": "MIT",
+  "keywords": [
+    "primavera",
+    "p6",
+    "scheduling",
+    "mcp",
+    "xer"
+  ],
+  "userConfig": {
+    "database": {
+      "type": "string",
+      "title": "P6 database file",
+      "description": "Optional full path of the P6 SQLite (.db) file to open automatically. Leave empty and ask Claude to open a file instead.",
+      "default": ""
+    },
+    "allow_edit": {
+      "type": "boolean",
+      "title": "Allow editing",
+      "description": "Off = read-only. On = editing tools are available (a backup is taken before the first edit). Run /reload-plugins after changing.",
+      "default": false
+    }
+  }
+}

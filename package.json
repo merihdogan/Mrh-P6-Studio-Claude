@@ -1,0 +1,40 @@
+{
+  "name": "mrh-p6-claude",
+  "version": "1.0.0",
+  "description": "MRH P6 for Claude: read and edit Primavera P6 Professional SQLite schedules from Claude Code and Claude Desktop (MCP).",
+  "author": "Merih Doğan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/merihdogan/mrh-p6-claude.git"
+  },
+  "keywords": [
+    "primavera",
+    "p6",
+    "mcp",
+    "scheduling",
+    "construction",
+    "xer",
+    "sqlite",
+    "planning"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "main": "mrh/mrh-mcp.js",
+  "bin": {
+    "mrh-p6-mcp": "mrh/mrh-mcp.js"
+  },
+  "scripts": {
+    "start": "node mrh/mrh-mcp.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/mrh-mcp-test.js",
+    "demo": "node araclar/dgn-demo-olustur.js ornek/mrh-demo.db",
+    "mcpb": "node araclar/mrh-mcpb-paketle.js"
+  },
+  "files": [
+    "mrh/",
+    "araclar/",
+    "LICENSE",
+    "README.md"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "mrh-p6": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/mrh/mrh-mcp.js"
+      ],
+      "env": {
+        "MRH_EDIT": "${user_config.allow_edit}",
+        "MRH_DB": "${user_config.database}"
+      }
+    }
+  }
+}

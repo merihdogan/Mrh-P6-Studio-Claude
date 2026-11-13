@@ -1,0 +1,145 @@
+{
+  "manifest_version": "0.3",
+  "name": "mrh-p6",
+  "display_name": "MRH P6",
+  "version": "1.0.0",
+  "description": "Read and edit Primavera P6 Professional SQLite schedules.",
+  "long_description": "Open a Primavera P6 Professional SQLite database and ask about it in plain language: project overview, activity search and details, a 15-check schedule health score, baseline slips, look-ahead, read-only SQL and XER export. With editing enabled: update, create and delete activities, manage relationships, set the data date and undo, with an automatic backup before the first edit.",
+  "author": {
+    "name": "Merih Doğan",
+    "url": "https://github.com/merihdogan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/merihdogan/mrh-p6-claude"
+  },
+  "homepage": "https://github.com/merihdogan/mrh-p6-claude",
+  "license": "MIT",
+  "keywords": [
+    "primavera",
+    "p6",
+    "scheduling",
+    "xer"
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "mrh/mrh-mcp.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/mrh/mrh-mcp.js"
+      ],
+      "env": {
+        "MRH_DB": "${user_config.database}",
+        "MRH_EDIT": "${user_config.allow_edit}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "mrh_db_find",
+      "description": "List P6 SQLite (.db/.sqlite) files in a folder"
+    },
+    {
+      "name": "mrh_db_open",
+      "description": "Open a Primavera P6 Professional SQLite database by full path"
+    },
+    {
+      "name": "mrh_project_list",
+      "description": "List the projects in the open database with data date, finish, baseline project and activity count."
+    },
+    {
+      "name": "mrh_project_overview",
+      "description": "Progress (duration weighted), planned progress from the baseline, forecast vs baseline finish, status counts, critical/negative-float counts and progress per top-level WBS."
+    },
+    {
+      "name": "mrh_activity_search",
+      "description": "Filter and list activities"
+    },
+    {
+      "name": "mrh_activity_get",
+      "description": "Full details of one activity: dates, durations, float, constraints, predecessors and successors, resource assignments, activity codes, user fields and notes."
+    },
+    {
+      "name": "mrh_health_check",
+      "description": "Run 15 schedule quality checks (missing logic, leads, lags, non-FS links, hard constraints, high/negative float, long durations, invalid dates, status errors, duplicate links, loops, redundant links, critical activities) and return a 0-100 score with sample activity codes per check."
+    },
+    {
+      "name": "mrh_baseline_compare",
+      "description": "Activities whose current finish is later than the baseline finish, worst first."
+    },
+    {
+      "name": "mrh_lookahead",
+      "description": "Activities that start or finish within N days after the data date."
+    },
+    {
+      "name": "mrh_sql_read",
+      "description": "Run one read-only SELECT/WITH query on the P6 database (P6 table names such as TASK, TASKPRED, PROJWBS, CALENDAR, RSRC, TASKRSRC)"
+    },
+    {
+      "name": "mrh_xer_export",
+      "description": "Write a project to an XER file (the database is not changed)"
+    },
+    {
+      "name": "mrh_backup_list",
+      "description": "List the automatic backups of the open database (taken before edits, kept next to the database in mrh_yedekler)."
+    },
+    {
+      "name": "mrh_activity_update",
+      "description": "Apply the same changes to one or many activities in ONE transaction (all or nothing)"
+    },
+    {
+      "name": "mrh_activity_create",
+      "description": "Create a not-started activity (code is generated when omitted)"
+    },
+    {
+      "name": "mrh_activity_delete",
+      "description": "Delete activities together with their links, resource assignments, codes, user field values and notes"
+    },
+    {
+      "name": "mrh_link_add",
+      "description": "Add a relationship between two activities"
+    },
+    {
+      "name": "mrh_link_update",
+      "description": "Change the type and/or lag of a relationship (link_id from mrh_activity_get)."
+    },
+    {
+      "name": "mrh_link_delete",
+      "description": "Delete relationships by link_id (from mrh_activity_get)."
+    },
+    {
+      "name": "mrh_data_date_set",
+      "description": "Set the project data date (YYYY-MM-DD)"
+    },
+    {
+      "name": "mrh_undo",
+      "description": "Revert the last edit made in this session"
+    }
+  ],
+  "user_config": {
+    "database": {
+      "type": "file",
+      "title": "P6 database file",
+      "description": "Optional. The P6 SQLite (.db) file to open automatically.",
+      "required": false
+    },
+    "allow_edit": {
+      "type": "boolean",
+      "title": "Allow editing",
+      "description": "Off = read-only. Turn the extension off and on after changing.",
+      "default": false,
+      "required": false
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "win32",
+      "darwin",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=22.13.0"
+    }
+  }
+}
