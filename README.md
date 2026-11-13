@@ -45,7 +45,7 @@ To set a default database or **allow editing**: run `/plugin` → **Installed** 
 
 ## 🖥️ Install — Claude Desktop
 
-1. Download **[mrh-p6-1.0.0.mcpb](https://github.com/merihdogan/Mrh-P6-Studio-Claude/raw/main/dagitim/mrh-p6-1.0.0.mcpb)** (or build it yourself with `npm run mcpb`).
+1. Build the extension file in this folder: `npm run mcpb` → `paket/mrh-p6-1.0.0.mcpb` (needs Node.js 22.13+, nothing to install).
 2. Claude Desktop → **Settings → Extensions** → drag the file in → **Install**.
 3. Optionally pick the **P6 database file** and turn on **Allow editing**. Turn the extension off and on after changing settings.
 
@@ -149,7 +149,7 @@ The server is a single dependency-free Node.js program in [`mrh/`](mrh): `mrh-mc
 - ✏️ **Güvenli düzenleme:** yüzlerce aktivitenin ilerlemesini tek işlemde günceller; önizleme, otomatik yedek ve tek adımda geri alma vardır.
 - 🔒 Varsayılan olarak **salt okunurdur**; düzenleme için `MRH_EDIT=1` gerekir. Ek paket yoktur, MIT lisanslıdır.
 
-**Kurulum:** **Claude Code:** `claude plugin marketplace add merihdogan/Mrh-P6-Studio-Claude` ve ardından `claude plugin install mrh-p6@mrh-p6`. **Claude Desktop:** `dagitim` klasöründeki `mrh-p6-1.0.0.mcpb` dosyasını Ayarlar → Uzantılar sayfasına sürükleyin.
+**Kurulum:** **Claude Code:** `claude plugin marketplace add merihdogan/Mrh-P6-Studio-Claude` ve ardından `claude plugin install mrh-p6@mrh-p6`. **Claude Desktop:** bu klasörde `npm run mcpb` çalıştırın ve oluşan `paket/mrh-p6-1.0.0.mcpb` dosyasını Ayarlar → Uzantılar sayfasına sürükleyin.
 
 Gereksinim: **Node.js 22.13+**. Düzenlemeden sonra P6'da **F5** ve **F9** yapın. İlk denemeyi veritabanınızın bir **kopyası** üzerinde yapın.
 

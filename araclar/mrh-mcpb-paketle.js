@@ -1,12 +1,12 @@
 'use strict';
-// Claude Desktop uzantisi (.mcpb) uretir: dagitim/mrh-p6-<surum>.mcpb
+// Claude Desktop uzantisi (.mcpb) uretir: paket/mrh-p6-<surum>.mcpb
 const fs = require('node:fs');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 const KOK = path.join(__dirname, '..');
 const surum = require('../package.json').version;
-const gecici = path.join(KOK, 'dagitim', 'mcpb');
-const cikti = path.join(KOK, 'dagitim', `mrh-p6-${surum}.mcpb`);
+const gecici = path.join(KOK, 'paket', 'mcpb');
+const cikti = path.join(KOK, 'paket', `mrh-p6-${surum}.mcpb`);
 fs.rmSync(gecici, { recursive: true, force: true }); fs.rmSync(cikti, { force: true });
 fs.mkdirSync(gecici, { recursive: true });
 const icerik = ['manifest.json', 'package.json', 'LICENSE', 'README.md', 'mrh'];
