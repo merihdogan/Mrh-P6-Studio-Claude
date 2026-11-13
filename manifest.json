@@ -1,9 +1,9 @@
 {
   "manifest_version": "0.3",
   "name": "mrh-p6",
-  "display_name": "MRH P6",
+  "display_name": "MRH P6 Studio",
   "version": "1.0.0",
-  "description": "Read and edit Primavera P6 Professional SQLite schedules.",
+  "description": "Talk to your Primavera P6 Professional SQLite schedules.",
   "long_description": "Open a Primavera P6 Professional SQLite database and ask about it in plain language: project overview, activity search and details, a 15-check schedule health score, baseline slips, look-ahead, read-only SQL and XER export. With editing enabled: update, create and delete activities, manage relationships, set the data date and undo, with an automatic backup before the first edit.",
   "author": {
     "name": "Merih Doğan",
@@ -11,9 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/merihdogan/mrh-p6-claude"
+    "url": "https://github.com/merihdogan/Mrh-P6-Studio-Claude"
   },
-  "homepage": "https://github.com/merihdogan/mrh-p6-claude",
+  "homepage": "https://github.com/merihdogan/Mrh-P6-Studio-Claude",
+  "support": "https://github.com/merihdogan/Mrh-P6-Studio-Claude/issues",
   "license": "MIT",
   "keywords": [
     "primavera",

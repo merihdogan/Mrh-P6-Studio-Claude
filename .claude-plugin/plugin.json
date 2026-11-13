@@ -1,13 +1,13 @@
 {
   "name": "mrh-p6",
   "version": "1.0.0",
-  "description": "Read and edit Primavera P6 Professional SQLite schedules: overview, activity search, health check, baseline slips, look-ahead, XER export and safe, undoable edits.",
+  "description": "Talk to your Primavera P6 Professional SQLite schedules: overview, activity search, health check, baseline slips, look-ahead, XER export and safe, undoable edits.",
   "author": {
     "name": "Merih Doğan",
     "url": "https://github.com/merihdogan"
   },
-  "homepage": "https://github.com/merihdogan/mrh-p6-claude",
-  "repository": "https://github.com/merihdogan/mrh-p6-claude",
+  "homepage": "https://github.com/merihdogan/Mrh-P6-Studio-Claude",
+  "repository": "https://github.com/merihdogan/Mrh-P6-Studio-Claude",
   "license": "MIT",
   "keywords": [
     "primavera",
