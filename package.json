@@ -1,6 +1,6 @@
 {
   "name": "mrh-p6-studio-claude",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MRH P6 Studio for Claude - talk to your Primavera P6 Professional schedules in Claude Code and Claude Desktop (open-source MCP plugin).",
   "author": "Merih Doğan",
   "license": "MIT",

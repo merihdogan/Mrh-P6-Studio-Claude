@@ -2,9 +2,9 @@
   "manifest_version": "0.3",
   "name": "mrh-p6",
   "display_name": "MRH P6 Studio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Talk to your Primavera P6 Professional SQLite schedules.",
-  "long_description": "Open a Primavera P6 Professional SQLite database and ask about it in plain language: project overview, activity search and details, a 15-check schedule health score, baseline slips, look-ahead, read-only SQL and XER export. With editing enabled: update, create and delete activities, manage relationships, set the data date and undo, with an automatic backup before the first edit.",
+  "long_description": "Open a Primavera P6 Professional SQLite database and ask about it in plain language, or open the interactive dashboard right inside the chat (KPIs, S-curve, Gantt with baseline, health, slips): project overview, activity search and details, a 15-check schedule health score, baseline slips, look-ahead, read-only SQL and XER export. With editing enabled: update, create and delete activities, manage relationships, set the data date and undo, with an automatic backup before the first edit.",
   "author": {
     "name": "Merih Doğan",
     "url": "https://github.com/merihdogan"
@@ -72,6 +72,18 @@
     {
       "name": "mrh_lookahead",
       "description": "Activities that start or finish within N days after the data date."
+    },
+    {
+      "name": "mrh_dashboard",
+      "description": "Show an interactive dashboard of a project inside the chat: KPIs, progress S-curve, Gantt with baseline bars, health check, baseline slips and look-ahead"
+    },
+    {
+      "name": "mrh_progress_curve",
+      "description": "Cumulative duration-weighted progress over time: baseline plan, current plan and actual up to the data date (percent, about 48 points)."
+    },
+    {
+      "name": "mrh_critical_activities",
+      "description": "Open activities on the critical path (total float <= 0 or longest path), ordered by start date, with WBS, remaining duration and baseline finish."
     },
     {
       "name": "mrh_sql_read",
